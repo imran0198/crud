@@ -1,0 +1,19 @@
+<BUTton (click)="addNavI()" class="btn btn-outline-success">Add product</BUTton>
+<table border="2px">
+    <tr>
+        <th>ProductName</th>
+        <th>ProductPrice</th>
+        <th>PrdouctImageURL</th>
+        <th>ProductDescription</th>
+        <th>ProductDelete</th>
+        <th>ProductEdit</th>
+    </tr>
+    <tr *ngFor="let d of data">
+        <td>{{d.productName}}</td>
+        <td>{{d.productPrice}}</td>
+        <td>{{d.productDescription}}</td>
+        <td><img [src]="d.productImageURL" width="200px" height="200px" alt=""></td>
+        <td ><button style="margin-left: 22px;" class="btn btn-outline-danger" (click)="toDelete(d._id)">Delete</button></td>
+        <td><button class="btn btn-outline-success" style="margin-left: 22px;"  [routerLink]="['/edit/',d._id]">Edit</button></td>
+    </tr>
+</table>

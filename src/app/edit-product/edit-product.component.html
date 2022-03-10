@@ -1,0 +1,26 @@
+<div class="container">
+    <div class="col-md-6">
+        <div class="card">
+
+            <form #editform="ngForm" (ngSubmit)="edit(editform.value)">
+                <div>
+                    <label for="">productName</label>
+                    <input #productName="ngModel" name="productName" [(ngModel)]="selectedProduct.productName" type="text"  ngModel>
+                </div>
+                <div>
+                    <label for="">productPrice</label>
+                    <input #productPrice="ngModel" name="productPrice" [(ngModel)]="selectedProduct.productPrice" type="number" ngModel>
+                </div>
+                <div>
+                    <label for="">productDescription</label>
+                    <input #productDescription="ngModel"  [(ngModel)]="selectedProduct.productDescription" name="productDescription" type="text" ngModel>
+                </div>
+                <div>
+                    <label for="">productImageURL</label>
+                    <input  #productImageURL="ngModel" [(ngModel)]="selectedProduct.productImageURL" name="productImageURL" type="text" ngModel>
+                </div>
+                <button type="submit" (click)="sent()">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>

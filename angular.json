@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "CrudOperation"
+    }
+  },
+  "defaultProject": "CrudOperation",
+  "cli": {
+    "analytics": "4b4b903b-5840-4d85-b62c-84272c7169e0"
+  }
 }
